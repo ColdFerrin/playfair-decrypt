@@ -4,14 +4,15 @@ import java.util.TreeSet;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-public class CipherBlock {
+
+public class Cipher {
     private static final Logger LOG = LogManager.getLogger(String.valueOf(MethodHandles.lookup().lookupClass()));
     private String key;
     private char[][] cipher = new char[5][5];
     private final SortedSet<Character> letters = new TreeSet<Character>();
 
 
-    public CipherBlock(String key){
+    public Cipher(String key){
         this.key = key;
         key = key.toLowerCase().replaceAll("\\s+","");
         key = key.replaceAll("j", "i");
