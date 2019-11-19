@@ -13,9 +13,9 @@ public class Cipher {
 
 
     public Cipher(String key){
-        this.key = key;
-        key = key.toLowerCase().replaceAll("\\s+","");
+        key = key.replaceAll("\\s+","").toLowerCase();
         key = key.replaceAll("j", "i");
+        this.key = key;
         printKey();
         generateLetters();
         generateCipher();
