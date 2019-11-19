@@ -14,6 +14,7 @@ public class Encrypt {
     private int firstJ;
     private int secondI;
     private int secondJ;
+    private String encryptedPhrase;
 
 
     public Encrypt(String key, String phrase) {
@@ -26,7 +27,7 @@ public class Encrypt {
 
     private void encryptPhrase(Phrase phraseObject,Cipher cipher) {
         CharacterIterator it = new StringCharacterIterator(phraseObject.getPhrase());
-        String encryptedPhrase = new String();
+        encryptedPhrase = "";
         Character first;
         Character second;
         int firstAnswerI;
@@ -118,4 +119,7 @@ public class Encrypt {
         }
     }
 
+    public String getEncryptedPhrase() {
+        return encryptedPhrase;
+    }
 }

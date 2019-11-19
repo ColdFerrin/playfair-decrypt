@@ -13,6 +13,7 @@ public class Decrypt {
     private int firstJ;
     private int secondI;
     private int secondJ;
+    private String decryptedPhrase;
 
     public Decrypt(String key, String encyptedPhrase){
         Cipher cipher = new Cipher(key);
@@ -21,7 +22,7 @@ public class Decrypt {
 
     private void decryptPhrase(Cipher cipher, String encryptedPhrase){
         CharacterIterator it = new StringCharacterIterator(encryptedPhrase);
-        String decryptedPhrase = new String();
+        decryptedPhrase = "";
         Character first;
         Character second;
         int firstAnswerI;
@@ -114,4 +115,7 @@ public class Decrypt {
         }
     }
 
+    public String getDecryptedPhrase() {
+        return decryptedPhrase;
+    }
 }
