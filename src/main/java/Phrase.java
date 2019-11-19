@@ -20,8 +20,8 @@ public class Phrase {
     }
 
     private void printPhrase() {
-        LOG.info("The phrase is:");
-        LOG.info(phrase);
+        LOG.debug("The phrase is:");
+        LOG.debug(phrase);
     }
 
     public String getPhrase() {

@@ -41,13 +41,13 @@ public class Decrypt {
             } else {
                 second = REPLACEMENTCHAR;
             }
-            LOG.debug("First is: " + first);
-            LOG.debug("Second is: " + second);
+            LOG.trace("First is: " + first);
+            LOG.trace("Second is: " + second);
             getPosition(first, second, cipher);
-            LOG.debug("First I: " + firstI );
-            LOG.debug("First J: " + firstJ);
-            LOG.debug("Second I: " + secondI);
-            LOG.debug("Second J: " + secondJ);
+            LOG.trace("First I: " + firstI );
+            LOG.trace("First J: " + firstJ);
+            LOG.trace("Second I: " + secondI);
+            LOG.trace("Second J: " + secondJ);
             if (firstI == secondI){
                 firstAnswerI = firstI;
                 secondAnswerI = firstI;
@@ -82,17 +82,17 @@ public class Decrypt {
 
             }
 
-            LOG.debug("First Answer I: " + firstAnswerI );
-            LOG.debug("First Answer J: " + firstAnswerJ);
-            LOG.debug("Second Answer I: " + secondAnswerI);
-            LOG.debug("Second Answer J: " + secondAnswerJ);
-            LOG.debug("First encrypted letter: " + cipher.getCipher(firstAnswerI,firstAnswerJ));
-            LOG.debug("Second Encrypted letter: " + cipher.getCipher(secondAnswerI,secondAnswerJ));
+            LOG.trace("First Answer I: " + firstAnswerI );
+            LOG.trace("First Answer J: " + firstAnswerJ);
+            LOG.trace("Second Answer I: " + secondAnswerI);
+            LOG.trace("Second Answer J: " + secondAnswerJ);
+            LOG.trace("First encrypted letter: " + cipher.getCipher(firstAnswerI,firstAnswerJ));
+            LOG.trace("Second Encrypted letter: " + cipher.getCipher(secondAnswerI,secondAnswerJ));
             decryptedPhrase = decryptedPhrase + cipher.getCipher(firstAnswerI,firstAnswerJ) + cipher.getCipher(secondAnswerI,secondAnswerJ);
 
         }
-        LOG.info("The decrypted phrase is:");
-        LOG.info(decryptedPhrase);
+        LOG.debug("The decrypted phrase is:");
+        LOG.debug(decryptedPhrase);
     }
 
     private void getPosition(Character first,Character second, Cipher cipher) {

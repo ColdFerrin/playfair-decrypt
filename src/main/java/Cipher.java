@@ -54,13 +54,13 @@ public class Cipher {
             log = log + "\n";
         }
         log = log + "\n";
-        LOG.info(log);
+        LOG.debug(log);
     }
 
 
     private void printKey() {
-        LOG.info("The key is:");
-        LOG.info(key);
+        LOG.debug("The key is:");
+        LOG.debug(key);
     }
 
 
