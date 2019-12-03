@@ -19,7 +19,7 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.zip.GZIPInputStream;
 
-public class Encyption {
+public class Encryption {
 
     private static final Logger LOG = LogManager.getLogger(String.valueOf(MethodHandles.lookup().lookupClass()));
     public static final String wikiFile = "enwiki-latest-all-titles-in-ns0.gz";
@@ -68,8 +68,6 @@ public class Encyption {
 
         String tempPath = System.getProperty("java.io.tmpdir");
         LOG.debug("temp path: " + tempPath);
-        String os = System.getProperty("os.name");
-        LOG.debug("os: " + os);
         int cores = Runtime.getRuntime().availableProcessors();
         LOG.debug("cores: "+ cores);
 
@@ -85,10 +83,6 @@ public class Encyption {
 
         BufferedReader reader;
         String line;
-
-        if (!os.startsWith("Windows")){
-
-        }
 
         reader = new BufferedReader(new FileReader(wikiFilePath));
         line = reader.readLine();
