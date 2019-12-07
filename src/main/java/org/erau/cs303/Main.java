@@ -1,3 +1,5 @@
+package org.erau.cs303;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -19,7 +21,7 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.zip.GZIPInputStream;
 
-public class Encryption {
+public class Main {
 
     private static final Logger LOG = LogManager.getLogger(String.valueOf(MethodHandles.lookup().lookupClass()));
     public static final String wikiFile = "enwiki-latest-all-titles-in-ns0.gz";

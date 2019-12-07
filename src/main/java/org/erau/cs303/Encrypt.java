@@ -1,10 +1,11 @@
+package org.erau.cs303;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.lang.invoke.MethodHandles;
 import java.text.CharacterIterator;
 import java.text.StringCharacterIterator;
-import java.util.*;
 
 public class Encrypt {
     private static final Logger LOG = LogManager.getLogger(String.valueOf(MethodHandles.lookup().lookupClass()));
