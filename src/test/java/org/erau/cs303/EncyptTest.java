@@ -1,4 +1,6 @@
+package org.erau.cs303;
 
+import org.erau.cs303.Encrypt;
 import org.junit.Test;
 
 
